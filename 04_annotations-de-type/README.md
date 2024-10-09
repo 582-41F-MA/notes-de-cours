@@ -210,3 +210,59 @@ type en particulier.
 ```ts
 const node = document.querySelector("#name") as HTMLParagraphElement;
 ```
+
+## Unions de type
+
+Certains opérateurs propres à TypeScript permettent de créer de nouveaux
+types à partir de types existant. C'est le cas de l'opérateur d'union
+`|` qui permet de représenter des valeurs qui sont soit d'un type, soit
+d'un autre.
+
+Considérons par exemple la signature ci-dessous.
+
+```ts
+function printID(id: number | string): void { ... }
+```
+
+La fonction `printID` peut être appliquée sur un argument de type soit
+`number` soit `string`. 
+
+Quoique les unions de type peuvent créer des abstractions utiles, on
+fera attention de ne pas en abuser. Une fonction qui s'applique sur un
+seul type d'argument ou retourne un seul type de valeur est plus facile
+à utiliser et à tester qu'une fonction fonction qui travaille avec des
+unions de type.
+
+## Types littéraux
+
+En plus des types généraux `string` et `number`, on peut définir un type
+comme étant une chaîne ou un nombre précis. C'est d'ailleurs ainsi que
+TypeScript définit le type d'une constante.
+
+```ts
+const n = 1;
+```
+
+Ci-dessus, le type de `n` n'est techniquement pas `number`, mais plutôt
+`1`. On se rappelle que le type d'une valeur représente l'ensemble des
+valeurs possibles pour celle-ci. Or, puisqu'on ne peut pas réaffecter la
+valeur d'une constante, `n` ne pourra jamais valoir `2` ou `3` ou
+n'importe quel autre nombre. L'ensemble des valeurs possible de `n`
+inclut uniquement `1`.
+
+Par eux-mêmes, les types littéraux ne sont pas très utiles. On peut
+toutefois les combiner avec l'opérateur d'union pour exprimer certaines
+contraintes.
+
+La signature suivante, par exemple, appartient à une fonction qui peut
+être appliquée seulement sur les arguments `"left"`, `"right"`, et
+`"center"`. Aucune autre valeur ne sera admise par le vérificateur de
+type.
+
+
+```ts
+function printText(s: string, align: "left" | "right" | "center"): string { 
+    ...
+}
+```
+
