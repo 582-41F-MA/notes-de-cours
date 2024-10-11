@@ -51,8 +51,50 @@ type account = {
 };
 ```
 
-TypeScript est un système de typage *structurel* ; c'est-à-dire que le
-vérificateur de type s'attarde à la structure des objets, et non à au
-nom de l'alias. N'importe quel objet ayant les mêmes propriétés que
-`account` satisfera l'interface de `account`, et pourra donc être
-utilisé comme tel.
+### Interface
+
+TypeScript est un système de typage structurel ; c'est-à-dire que le
+vérificateur de type s'attarde à la *structure* des objets, et non à au
+*nom* que porte l'alias. Un alias décrit donc l'*interface* d'une
+catégorie d'objet. On considérera que n'importe quel objet ayant les
+propriétés requises *satisfait* l'interface, et donc qu'il fait partie
+de la catégorie, même si l'objet en question a des propriétés
+supplémentaires.
+
+Considérons par exemple un alias nommé `product` qui représente les
+produits d'un commerce. Le commerce a plusieurs catégories de produits
+(livres, papeterie, magazines, cartes cadeaux, etc), chacune ayant des
+propriétés particulières. Tous les produits ont toutefois un prix. Le
+fait qu'un objet aille un prix ou non détermine si celui-ci peut être
+considéré par notre programme comme un `product`.
+
+Voici comment on pourrait décrire ce domaine d'application à l'aide
+d'alias de type :
+
+```ts
+type product = { price: number };
+type book = { title: string, price: number, pages: number };
+type stationery = { name: string, price: number };
+```
+
+Puisque les objets de type `book` et `stationery` ont une propriété
+`price` dont le type est `number`, ils peuvent aussi être considérés
+comme faisant partie de la catégorie `product`.
+
+Considérons maintenant une fonction `buy` qui permet d'acheter un des
+produits du commerce. Bien sûr, il ne sera pas possible de spécifier le
+type du produit dans la signature de la fonction. Sinon, on pourra
+seulement appliquer `buy` sur cette catégorie de produit. Pour que la
+fonction `buy` puisse être appliquée sur tous les produits, il faudra
+plutôt utiliser l'alias `product` comme le type du paramètre.
+
+```ts
+function buy(p: product): void { ... }
+```
+
+Même après que la fonction aille été conçue, il sera facile d'ajouter de
+nouvelles catégories de produit. Il faudra simplement que celles-ci
+aillent une propriété `price` dont la valeur est de type `number`. 
+
+Cette caractéristique de TypeScript permet de penser un programme en
+terme de *composition*.
