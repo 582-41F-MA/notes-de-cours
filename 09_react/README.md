@@ -46,6 +46,16 @@ d'applications est de lire sa documentation. React ne fait pas exception
 le tutoriel offert sur le site officiel de React. Vous trouverez
 ci-dessous les chapitres à lire pour chaque cours.
 
+### Cours 10
+
+-   [Writing Markup with JSX](https://react.dev/learn/writing-markup-with-jsx)
+-   [JavaScript in JSX with Curly Braces](https://react.dev/learn/javascript-in-jsx-with-curly-braces)
+-   [Passing Props to a Component](https://react.dev/learn/passing-props-to-a-component)
+-   [Destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+-   [Using TypeScript](https://react.dev/learn/typescript)
+-   [Conditional Rendering](https://react.dev/learn/conditional-rendering)
+-   [Rendering Lists](https://react.dev/learn/rendering-lists)
+
 ### Cours 9
 
 -   [Your First Component](https://react.dev/learn/your-first-component)
