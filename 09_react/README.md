@@ -46,6 +46,11 @@ d'applications est de lire sa documentation. React ne fait pas exception
 le tutoriel offert sur le site officiel de React. Vous trouverez
 ci-dessous les chapitres à lire pour chaque cours.
 
+### Cours 11
+
+-   [Keeping Components Pure](https://react.dev/learn/keeping-components-pure)
+-   [Understanding Your UI as a Tree](https://react.dev/learn/understanding-your-ui-as-a-tree)
+
 ### Cours 10
 
 -   [Writing Markup with JSX](https://react.dev/learn/writing-markup-with-jsx)
