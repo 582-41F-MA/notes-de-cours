@@ -46,12 +46,25 @@ d'applications est de lire sa documentation. React ne fait pas exception
 le tutoriel offert sur le site officiel de React. Vous trouverez
 ci-dessous les chapitres à lire pour chaque cours.
 
+### Cours 12
+
+-   [State: A Component's Memory](https://react.dev/learn/state-a-components-memory)
+-   [Render and Commit](https://react.dev/learn/render-and-commit)
+-   [State as Snapshot](https://react.dev/learn/state-as-a-snapshot)
+-   [Queueing a Series of State Updates](https://react.dev/learn/queueing-a-series-of-state-updates)
+-   [Updating Objects in State](https://react.dev/learn/updating-objects-in-state)
+-   [Updating Arrays in State](https://react.dev/learn/updating-arrays-in-state)
+
 ### Cours 11
+
+-   [Responding to Events](https://react.dev/learn/responding-to-events)
+
+### Cours 10
 
 -   [Keeping Components Pure](https://react.dev/learn/keeping-components-pure)
 -   [Understanding Your UI as a Tree](https://react.dev/learn/understanding-your-ui-as-a-tree)
 
-### Cours 10
+### Cours 9
 
 -   [Writing Markup with JSX](https://react.dev/learn/writing-markup-with-jsx)
 -   [JavaScript in JSX with Curly Braces](https://react.dev/learn/javascript-in-jsx-with-curly-braces)
@@ -61,7 +74,7 @@ ci-dessous les chapitres à lire pour chaque cours.
 -   [Conditional Rendering](https://react.dev/learn/conditional-rendering)
 -   [Rendering Lists](https://react.dev/learn/rendering-lists)
 
-### Cours 9
+### Cours 8
 
 -   [Your First Component](https://react.dev/learn/your-first-component)
 -   [Importing and Exporting Components](https://react.dev/learn/importing-and-exporting-components)
