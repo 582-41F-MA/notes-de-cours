@@ -46,6 +46,13 @@ d'applications est de lire sa documentation. React ne fait pas exception
 le tutoriel offert sur le site officiel de React. Vous trouverez
 ci-dessous les chapitres à lire pour chaque cours.
 
+### Cours 13
+
+-   [Reacting to Input with State](https://react.dev/learn/reacting-to-input-with-state)
+-   [Choosing the State Structure](https://react.dev/learn/choosing-the-state-structure)
+-   [Sharing State Between Components](https://react.dev/learn/sharing-state-between-components)
+-   [Preserving and Resetting State](https://react.dev/learn/preserving-and-resetting-state)
+
 ### Cours 12
 
 -   [State: A Component's Memory](https://react.dev/learn/state-a-components-memory)
